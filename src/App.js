@@ -1,11 +1,14 @@
-import './App.css';
+import "./App.css";
+
+import React from "react";
 import Main from "./components/Main/Main";
+import { motion } from "framer-motion";
 
 function App() {
   return (
-    <div className="container">
+    <motion.div layout className="container">
       <Main />
-    </div>
+    </motion.div>
   );
 }
 

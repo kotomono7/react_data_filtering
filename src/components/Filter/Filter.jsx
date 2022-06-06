@@ -1,4 +1,5 @@
-import { React, useEffect } from "react"
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Filter({ popular, setFiltered, activeGenre, setActiveGenre }) {
   useEffect(() => {
@@ -12,12 +13,9 @@ export default function Filter({ popular, setFiltered, activeGenre, setActiveGen
   }, [popular, setFiltered, activeGenre]);
 
   return (
-    <div className="filter-container">
+    <motion.div layout className="filter-container">
       <button className={activeGenre === 0 ? "active" : ""} onClick={() => setActiveGenre(0)}>
         All
-      </button>
-      <button className={activeGenre === 28 ? "active" : ""} onClick={() => setActiveGenre(28)}>
-        Action
       </button>
       <button className={activeGenre === 12 ? "active" : ""} onClick={() => setActiveGenre(12)}>
         Adventure
@@ -28,6 +26,6 @@ export default function Filter({ popular, setFiltered, activeGenre, setActiveGen
       <button className={activeGenre === 14 ? "active" : ""} onClick={() => setActiveGenre(14)}>
         Fantasy
       </button>
-    </div>
+    </motion.div>
   )
 }
